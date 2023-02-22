@@ -1,0 +1,78 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(22, 44, 78, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+}
+
+.popup {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(19, 89, 120, 0.07);
+  border-radius: 2px;
+  width: 320px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 104%;
+  text-align: center;
+  color: #162c4e;
+  margin-bottom: 28.8px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 29.8px;
+}
+
+.closePopup {
+  position: absolute;
+  top: 23.8px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: opacity ease 0.5s;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.closePopup::before,
+.closePopup::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: rgba(19, 89, 120, 1);
+}
+
+.closePopup::before {
+  transform: rotate(45deg);
+}
+
+.closePopup::after {
+  transform: rotate(-45deg);
+}
